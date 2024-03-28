@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  web:
+    image: tax_assistant_app:latest
+    ports:
+      - 8000:8000
+      - 8020:8020
+    networks:
+      - elastic
+    restart: always
+
+networks:
+  elastic:
+    driver: bridge
